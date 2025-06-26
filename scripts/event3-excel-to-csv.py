@@ -15,7 +15,9 @@ COLUMNS_TO_REMOVE = [
     r'^cep',
     r'^n.mero.*',
     r'^telefone.*',
-    r'^endere.o'
+    r'^endere.o',
+    r'^comprovante.*',
+    r'^minibio',
 ]
 
 
