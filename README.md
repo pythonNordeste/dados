@@ -4,7 +4,7 @@ Repositório de dados das edições da Python Nordeste.
 
 ## Limpando os dados
 
-Caso o evento use a plataforma da Even3, já existe um script em `scripts/even3-excel-to-csv.py` que lê o arquivo bruto de credenciamento da Even3 e gera um CSV sem colunas de dados sensíveis e com células vazias preenchidas com o texto `Não preencheu`.
+Caso o evento use a plataforma da Even3, já existe um script em `scripts/even3-excel-to-csv.py` que lê o arquivo bruto de credenciamento da Even3 e gera um CSV sem colunas de dados sensíveis e com células vazias preenchidas com o texto `Não respondeu`.
 
 ```shell
 scripts/even3-excel-to-csv.py "Python Nordeste 2019.xlsx"
