@@ -14,6 +14,8 @@ dependencies = [
     "openpyxl (>=3.1.5,<4.0.0)",
     "typer (>=0.16.0,<0.17.0)",
     "rich (>=14.0.0,<15.0.0)",
+    "dash (>=3.1.0,<4.0.0)",
+    "dash-bootstrap-components (>=2.0.3,<3.0.0)",
 ]
 
 [tool.poetry]
