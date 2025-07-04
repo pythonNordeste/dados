@@ -12,6 +12,11 @@ Repositório de dados das edições da Python Nordeste.
 | [2024/inscritos.csv](./data/2024/inscritos.csv) | 2024 | Pessoas inscritas na PyNE 2024 | `csv` |
 | [2025/inscritos.csv](./data/2025/inscritos.csv) | 2025 | Pessoas inscritas na PyNE 2025 | `csv` |
 
+## Veja também
+
+- [Dados da Python Brasil](https://github.com/pythonbrasil/dados)
+- [Projeto Dados Abertos da Python Brasil](https://github.com/pybropendata/pythonbrasil-opendata)
+
 ## Adicionando novos dados
 
 ### Limpando os dados
