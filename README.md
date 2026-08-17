@@ -11,7 +11,7 @@ Repositório de dados das edições da Python Nordeste.
 | [2019/inscritos.csv](./data/2019/inscritos.csv) | 2019 | Pessoas inscritas na PyNE 2019 | `csv` |
 | [2024/inscritos.csv](./data/2024/inscritos.csv) | 2024 | Pessoas inscritas na PyNE 2024 | `csv` |
 | [2025/inscritos.csv](./data/2025/inscritos.csv) | 2025 | Pessoas inscritas na PyNE 2025 | `csv` |
-| [2026/inscritos.csv](./data/2026/inscritos.csv) | 2025 | Pessoas inscritas na PyNE 2026 | `csv` |
+| [2026/inscritos.csv](./data/2026/inscritos.csv) | 2026 | Pessoas inscritas na PyNE 2026 | `csv` |
 
 ## Veja também
 
