@@ -10,6 +10,7 @@ from rich.console import Console
 
 
 COLUMNS_TO_EXPORT = [
+    r'.*UF(\s?).*',
     r'.*python.*',
     r'.*identi.*',
     r'.*define.*',
@@ -28,17 +29,10 @@ def get_columns_to_export(csv: DataFrame):
 
 
 @cli.command()
-def main(csv: Path, year: int | None = None):
+def main(csv: Path, year: int):
     # Reading the CSV file
     console.print(f'Reading the file [bold]{csv}[/bold]...')
     csv_content = read_csv(csv)
-
-    # Reading the year from the CSV file name if not provided
-    if not year:
-        if re.match(r'\d{4}', csv.name):
-            year = int(re.search(r'\d{4}', csv.name).group())
-        else:
-            year = date.today().year
 
     # Creating the export folder
     export_path = Path(f'graphs/{year}')
@@ -57,16 +51,24 @@ def main(csv: Path, year: int | None = None):
 
         # Formatting the labels to fit in the graph
         labels = [
-            textwrap.fill(str(label), width=15)
+            textwrap.fill(str(label), width=13)
             for label in count.index
         ]
 
         plot = count.plot(
             kind='bar',
             xlabel='',
-            figsize=(18, 9),
+            figsize=(len(count) * 2, 9),
             fontsize=16,
             color="#0C23F7",
+        )
+        plot.set_title(
+            label=column,
+            pad=15,
+            fontdict={
+                'fontsize': 16,
+                'fontweight': 'bold',
+            }
         )
         plot.bar_label(
             plot.containers[0],
