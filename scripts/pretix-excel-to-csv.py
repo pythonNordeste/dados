@@ -7,17 +7,35 @@ from rich.console import Console
 
 
 EMPTY_CELL_TEXT = 'Não respondeu'
+SHEET_NAME = 'Posição dos pedidos'
 COLUMNS_TO_REMOVE = [
-    r'^id',
-    r'^nome.*',
-    r'^e.mail',
-    r'^cpf',
-    r'^cep',
-    r'^n.mero.*',
-    r'^telefone.*',
-    r'^endere.o',
-    r'^comprovante.*',
-    r'^minibio',
+    r'.*do.evento',
+    r'.*do.pedido',
+    r'.*id\s.*',
+    r'status',
+    r'email',
+    r'.*telefone.*',
+    r'varia.*o',
+    r'taxa.*',
+    r'regra.*',
+    r'valor.*',
+    r'nome.do.*',
+    r'zona.do.*',
+    r'fileira.do.*',
+    r'n.mero.do.*',
+    r'empresa.*',
+    r'endere.o',
+    r'c.digo.*',
+    r'voucher.*',
+    r'segredo.*',
+    r'bloqueado',
+    r'v.lido.*',
+    r'coment.rio.*',
+    r'.*fatura.*',
+    r'.*acompanhamento',
+    r'.*vendas',
+    r'.*check-in',
+    r'.*link.*',
 ]
 
 
@@ -36,7 +54,7 @@ def get_columns_to_remove(excel_content: DataFrame):
 def convert(excel: Path):
     # Reading the Excel file
     console.print(f'Reading the file [bold]{excel}[/bold]...')
-    excel_content = read_excel(excel)
+    excel_content = read_excel(excel, sheet_name=SHEET_NAME)
     
     # Removing columns with sensive data
     columns_to_remove = list(get_columns_to_remove(excel_content))
